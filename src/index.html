@@ -1,0 +1,617 @@
+@@include("html/header.html")
+@@include("html/popup.html")
+<main class="page">
+    <section class="three__reasons">
+        <div class="three__reasons _container">
+            <div class="three__reasons-body">
+                <h2 class="three__reasons-title _title">
+                    <span>Три причины</span> <br>
+                    заказать воду Вятскую
+                </h2>
+                <div class="three__reasons-slider">
+                    <div class="three__reasons-info reasons-column">
+                        <div class="reasons-column__item">
+                            <div class="reasons-column__image" id="first-reason">
+                                <img src="img/advantages1.png" alt="">
+                            </div>
+                            <p class="reasons-column__text">Содержит все необходимые <br>макро и микроэлементы <br>
+                                — кальций, магний, натрий и йод.
+                            </p>
+                        </div>
+                        <div class="reasons-column__item">
+                            <div class="reasons-column__image" id="second-reason">
+                                <img src="img/advantages2.png" alt="">
+                            </div>
+                            <p class="reasons-column__text">
+                                Более 10 лет на рынке питьевой воды. <br>
+                                2000 клиентов каждый день получают воду. <br>
+                                5000 клиентов обслуживаются в месяц.
+                            </p>
+                        </div>
+                        <div class="reasons-column__item">
+                            <div class="reasons-column__image" id="third-reason">
+                                <img src="img/advantages3.png" alt="">
+                            </div>
+                            <p class="reasons-column__text">
+                                Доставка воды домой и в офис <br>
+                                без задержек. Развозим воду по Казани <br>
+                                Возможны поставки в Иннополис, Зеленодольск
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="three__reasons-slider-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <section class="calculator">
+        <div class="calculator__container _container">
+            <div class="calculator__body">
+                <h3 class="calculator__title _title">Калькулятор воды</h3>
+                <form action="#" class="calculator__form">
+                    <div class="calculator__form-top">
+                        <div id="order1"
+                            class="calculator__form-column column-calc column-calc__border column-calc__start">
+                            <span class="column-calc__title">Мы заказываем <br> воду</span>
+                            <div class="column-calc__choose">
+                                <input type="button" class="column-calc__input" data-delivery name="В офис"
+                                    value="в офис" id="to-ofice">
+                                <input type="button" class="column-calc__input" data-delivery name="Домой" value="домой"
+                                    id="to-home">
+                            </div>
+                        </div>
+                        <div id="order2"
+                            class="calculator__form-column column-calc column-calc__border column-calc__center">
+                            <span class="column-calc__title">будут пить</span>
+                            <div class="column-calc__choose">
+                                <div class="column-calc__count">
+                                    <input type="button" class="column-calc__count-minus count-minus" value="-">
+                                    <input type="text" class="calc__input" value="1" name="" id="count">
+                                    <input type="button" class="column-calc__count-plus count-plus" value="+">
+                                </div>
+                                <span class="column-calc__text">человек</span>
+                            </div>
+                        </div>
+                        <div id="order4"
+                            class="calculator__form-column column-calc column-calc__border column-calc__center">
+                            <span class="column-calc__title">НАМ НУЖЕН <br> ЗАПАС НА</span>
+                            <div class="column-calc__choose">
+                                <div class="column-calc__count">
+                                    <input type="button" class="column-calc__count-minus count-minus" value="-">
+                                    <input type="text" class="calc__input" min="1" value="1" name="" id="count">
+                                    <input type="button" class="column-calc__count-plus count-plus" value="+">
+                                </div>
+                                <span class="column-calc__text">дней</span>
+                            </div>
+                        </div>
+                        <div id="order3" class="calculator__form-column column-calc column-calc__end">
+                            <span class="column-calc__title">Готовка</span>
+                            <div class="column-calc__choose">
+                                <input type="button" class="column-calc__input" data-cooking name="С готовкой"
+                                    value="С готовкой" id="with-cooking">
+                                <input type="button" class="column-calc__input" data-cooking name="Без готовки"
+                                    value="Без готовки" id="without-cooking">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculator__form-bottom">
+                        <div class="calculator__form-pricing">
+                            <div class="calculator__form-item item-calc">
+                                <span class="item-calc__text">Ориентировочное <br> количество воды</span>
+                                <img src="img/bottol-icon.svg" alt="" class="item-calc__image">
+                                <span class="item-calc__count wather-count">1</span>
+                            </div>
+                            <div class="calculator__form-item">
+                                <span class="item-calc__text"> Цена со скидкой 10% <br> -от 20 бутылей</span>
+                                <img src="img/ract.svg" alt="" class="item-calc__image">
+                                <span class="item-calc__count sale-more20"> 100 ₽</span>
+                            </div>
+                        </div>
+                        <input type="submit" value="Заказать" id="calculate-order" class="_order-btn">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="catalog">
+        <div class="catalog__container _container">
+            <div class="catalog__body">
+                <h4 class="catalog__title _title">Основной кталог</h4>
+                <nav class="catalog__menu">
+                    <ul class="catalog__menu-body">
+                        <li class="catalog__menu-item">
+                            <a href="" class="catalog__menu-link">ВОДА</a>
+                        </li>
+                        <li class="catalog__menu-item">
+                            <a href="" class="catalog__menu-link">НАПИТКИ</a>
+                        </li>
+                        <li class="catalog__menu-item">
+                            <a href="" class="catalog__menu-link">ПОМПЫ</a>
+                        </li>
+                        <li class="catalog__menu-item">
+                            <a href="" class="catalog__menu-link">ДОПОЛНИТЕЛЬНО</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="catalog__products">
+                    <div class="catalog__product-slider water-slider swiper">
+                        <div class="catalog__products-body swiper-wrapper">
+                            <div class="catalog__swiper-slide swiper-slide">
+                                <article class="catalog__products-item item-product">
+                                    <div class="item-product__body">
+                                        <div class="item-product__image">
+                                            <img class="bottol-l19" src="img/19-litr.png" alt="">
+                                        </div>
+                                        <div class="item-product__content">
+                                            <h5 class="item-product__type">19 литров</h5>
+                                            <form  class="item-product__form form-product" action="#">
+                                                <div class="item-product__top">
+                                                    <span class="item-product__price"> 100 Р</span>
+                                                    <div class="item-product__calc ">
+                                                        <input type="button" class="item-product__minus count-minus"
+                                                            value="-">
+                                                        <input type="text" class="item-product__count calc__input"
+                                                            value="1" name="" id="count">
+                                                        <input type="button" class="item-product__plus count-plus"
+                                                            value="+">
+                                                    </div>
+                                                </div>
+                                                <input type="submit" class="item-product__order _order-btn"
+                                                    value="заказать">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="catalog__swiper-slide swiper-slide">
+                                <article class="catalog__products-item item-product">
+                                    <div class="item-product__body">
+                                        <div class="item-product__image">
+                                            <img class="bottol-l6" src="img/6-litr.png" alt="">
+                                        </div>
+                                        <div class="item-product__content">
+                                            <h5 class="item-product__type">19 литров</h5>
+                                            <form class="item-product__form form-product" action="#">
+                                                <div class="item-product__top">
+                                                    <span class="item-product__price"> 100 Р</span>
+                                                    <div class="item-product__calc ">
+                                                        <input type="button" class="item-product__minus count-minus"
+                                                            value="-">
+                                                        <input type="text" class="item-product__count calc__input"
+                                                            value="1" name="" id="count">
+                                                        <input type="button" class="item-product__plus count-plus"
+                                                            value="+">
+                                                    </div>
+                                                </div>
+                                                <input type="submit" class="item-product__order _order-btn"
+                                                    value="заказать">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="catalog__swiper-slide swiper-slide">
+                                <article class="catalog__products-item item-product">
+                                    <div class="item-product__body">
+                                        <div class="item-product__image">
+                                            <img class="bottol-l15" src="img/1.5-litr.png" alt="">
+                                        </div>
+                                        <div class="item-product__content">
+                                            <h5 class="item-product__type">19 литров</h5>
+                                            <form class="item-product__form form-product" action="#">
+                                                <div class="item-product__top">
+                                                    <span class="item-product__price"> 100 Р</span>
+                                                    <div class="item-product__calc ">
+                                                        <input type="button" class="item-product__minus count-minus"
+                                                            value="-">
+                                                        <input type="text" class="item-product__count calc__input"
+                                                            value="1" name="" id="count">
+                                                        <input type="button" class="item-product__plus count-plus"
+                                                            value="+">
+                                                    </div>
+                                                </div>
+                                                <input type="submit" class="item-product__order _order-btn"
+                                                    value="заказать">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="catalog__swiper-slide swiper-slide">
+                                <article class="catalog__products-item item-product">
+                                    <div class="item-product__body">
+                                        <div class="item-product__image">
+                                            <img class="bottol-l05" src="img/0.5-litr.png" alt="">
+                                        </div>
+                                        <div class="item-product__content">
+                                            <h5 class="item-product__type">19 литров</h5>
+                                            <form class="item-product__form form-product" action="#">
+                                                <div class="item-product__top">
+                                                    <span class="item-product__price"> 100 Р</span>
+                                                    <div class="item-product__calc ">
+                                                        <input type="button" class="item-product__minus count-minus"
+                                                            value="-">
+                                                        <input type="text" class="item-product__count calc__input"
+                                                            value="1" name="" id="count">
+                                                        <input type="button" class="item-product__plus count-plus"
+                                                            value="+">
+                                                    </div>
+                                                </div>
+                                                <input type="submit" class="item-product__order _order-btn"
+                                                    value="заказать">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__product-slider drinks-slider swiper">
+                        <div class="catalog__products-body swiper-wrapper">
+                            <div class="catalog__swiper-slide swiper-slide">
+                                <article class="catalog__products-item item-product">
+                                    <div class="item-product__body">
+                                        <div class="item-product__image">
+                                            <img class="bottol-l19" src="img/19-litr.png" alt="">
+                                        </div>
+                                        <div class="item-product__content">
+                                            <h5 class="item-product__type">напиток</h5>
+                                            <form class="item-product__form form-product" action="#">
+                                                <div class="item-product__top">
+                                                    <span class="item-product__price"> 100 Р</span>
+                                                    <div class="item-product__calc ">
+                                                        <input type="button" class="item-product__minus count-minus"
+                                                            value="-">
+                                                        <input type="text" class="item-product__count calc__input"
+                                                            value="1" name="" id="count">
+                                                        <input type="button" class="item-product__plus count-plus"
+                                                            value="+">
+                                                    </div>
+                                                </div>
+                                                <input type="submit" class="item-product__order _order-btn"
+                                                    value="заказать">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="catalog__swiper-slide swiper-slide">
+                                <article class="catalog__products-item item-product">
+                                    <div class="item-product__body">
+                                        <div class="item-product__image">
+                                            <img class="bottol-l6" src="img/6-litr.png" alt="">
+                                        </div>
+                                        <div class="item-product__content">
+                                            <h5 class="item-product__type">напиток</h5>
+                                            <form class="item-product__form form-product" action="#">
+                                                <div class="item-product__top">
+                                                    <span class="item-product__price"> 100 Р</span>
+                                                    <div class="item-product__calc ">
+                                                        <input type="button" class="item-product__minus count-minus"
+                                                            value="-">
+                                                        <input type="text" class="item-product__count calc__input"
+                                                            value="1" name="" id="count">
+                                                        <input type="button" class="item-product__plus count-plus"
+                                                            value="+">
+                                                    </div>
+                                                </div>
+                                                <input type="submit" class="item-product__order _order-btn"
+                                                    value="заказать">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="catalog__swiper-slide swiper-slide">
+                                <article class="catalog__products-item item-product">
+                                    <div class="item-product__body">
+                                        <div class="item-product__image">
+                                            <img class="bottol-l15" src="img/1.5-litr.png" alt="">
+                                        </div>
+                                        <div class="item-product__content">
+                                            <h5 class="item-product__type">напиток</h5>
+                                            <form class="item-product__form form-product" action="#">
+                                                <div class="item-product__top">
+                                                    <span class="item-product__price"> 100 Р</span>
+                                                    <div class="item-product__calc ">
+                                                        <input type="button" class="item-product__minus count-minus"
+                                                            value="-">
+                                                        <input type="text" class="item-product__count calc__input"
+                                                            value="1" name="" id="count">
+                                                        <input type="button" class="item-product__plus count-plus"
+                                                            value="+">
+                                                    </div>
+                                                </div>
+                                                <input type="submit" class="item-product__order _order-btn"
+                                                    value="заказать">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="catalog__swiper-slide swiper-slide">
+                                <article class="catalog__products-item item-product">
+                                    <div class="item-product__body">
+                                        <div class="item-product__image">
+                                            <img class="bottol-l05" src="img/0.5-litr.png" alt="">
+                                        </div>
+                                        <div class="item-product__content">
+                                            <h5 class="item-product__type">напиток</h5>
+                                            <form class="item-product__form form-product" action="#">
+                                                <div class="item-product__top">
+                                                    <span class="item-product__price"> 100 Р</span>
+                                                    <div class="item-product__calc ">
+                                                        <input type="button" class="item-product__minus count-minus"
+                                                            value="-">
+                                                        <input type="text" class="item-product__count calc__input"
+                                                            value="1" name="" id="count">
+                                                        <input type="button" class="item-product__plus count-plus"
+                                                            value="+">
+                                                    </div>
+                                                </div>
+                                                <input type="submit" class="item-product__order _order-btn"
+                                                    value="заказать">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__product-slider pomps-slider swiper">
+                        <div class="catalog__products-body swiper-wrapper">
+                            <div class="catalog__swiper-slide swiper-slide">
+                                <article class="catalog__products-item item-product">
+                                    <div class="item-product__body">
+                                        <div class="item-product__image">
+                                            <img class="bottol-l19" src="img/19-litr.png" alt="">
+                                        </div>
+                                        <div class="item-product__content">
+                                            <h5 class="item-product__type">помп</h5>
+                                            <form class="item-product__form form-product" action="#">
+                                                <div class="item-product__top">
+                                                    <span class="item-product__price"> 100 Р</span>
+                                                    <div class="item-product__calc ">
+                                                        <input type="button" class="item-product__minus count-minus"
+                                                            value="-">
+                                                        <input type="text" class="item-product__count calc__input"
+                                                            value="1" name="" id="count">
+                                                        <input type="button" class="item-product__plus count-plus"
+                                                            value="+">
+                                                    </div>
+                                                </div>
+                                                <input type="submit" class="item-product__order _order-btn"
+                                                    value="заказать">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="catalog__swiper-slide swiper-slide">
+                                <article class="catalog__products-item item-product">
+                                    <div class="item-product__body">
+                                        <div class="item-product__image">
+                                            <img class="bottol-l6" src="img/6-litr.png" alt="">
+                                        </div>
+                                        <div class="item-product__content">
+                                            <h5 class="item-product__type">помп</h5>
+                                            <form class="item-product__form form-product" action="#">
+                                                <div class="item-product__top">
+                                                    <span class="item-product__price"> 100 Р</span>
+                                                    <div class="item-product__calc ">
+                                                        <input type="button" class="item-product__minus count-minus"
+                                                            value="-">
+                                                        <input type="text" class="item-product__count calc__input"
+                                                            value="1" name="" id="count">
+                                                        <input type="button" class="item-product__plus count-plus"
+                                                            value="+">
+                                                    </div>
+                                                </div>
+                                                <input type="submit" class="item-product__order _order-btn"
+                                                    value="заказать">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="catalog__swiper-slide swiper-slide">
+                                <article class="catalog__products-item item-product">
+                                    <div class="item-product__body">
+                                        <div class="item-product__image">
+                                            <img class="bottol-l15" src="img/1.5-litr.png" alt="">
+                                        </div>
+                                        <div class="item-product__content">
+                                            <h5 class="item-product__type">помп</h5>
+                                            <form class="item-product__form form-product" action="#">
+                                                <div class="item-product__top">
+                                                    <span class="item-product__price"> 100 Р</span>
+                                                    <div class="item-product__calc ">
+                                                        <input type="button" class="item-product__minus count-minus"
+                                                            value="-">
+                                                        <input type="text" class="item-product__count calc__input"
+                                                            value="1" name="" id="count">
+                                                        <input type="button" class="item-product__plus count-plus"
+                                                            value="+">
+                                                    </div>
+                                                </div>
+                                                <input type="submit" class="item-product__order _order-btn"
+                                                    value="заказать">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="catalog__swiper-slide swiper-slide">
+                                <article class="catalog__products-item item-product">
+                                    <div class="item-product__body">
+                                        <div class="item-product__image">
+                                            <img class="bottol-l05" src="img/0.5-litr.png" alt="">
+                                        </div>
+                                        <div class="item-product__content">
+                                            <h5 class="item-product__type">помп</h5>
+                                            <form class="item-product__form form-product" action="#">
+                                                <div class="item-product__top">
+                                                    <span class="item-product__price"> 100 Р</span>
+                                                    <div class="item-product__calc ">
+                                                        <input type="button" class="item-product__minus count-minus"
+                                                            value="-">
+                                                        <input type="text" class="item-product__count calc__input"
+                                                            value="1" name="" id="count">
+                                                        <input type="button" class="item-product__plus count-plus"
+                                                            value="+">
+                                                    </div>
+                                                </div>
+                                                <input type="submit" class="item-product__order _order-btn"
+                                                    value="заказать">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__product-slider more-slider swiper">
+                        <div class="catalog__products-body swiper-wrapper">
+                            <div class="catalog__swiper-slide swiper-slide">
+                                <article class="catalog__products-item item-product">
+                                    <div class="item-product__body">
+                                        <div class="item-product__image">
+                                            <img class="bottol-l19" src="img/19-litr.png" alt="">
+                                        </div>
+                                        <div class="item-product__content">
+                                            <h5 class="item-product__type">дополн</h5>
+                                            <form class="item-product__form form-product" action="#">
+                                                <div class="item-product__top">
+                                                    <span class="item-product__price"> 100 Р</span>
+                                                    <div class="item-product__calc ">
+                                                        <input type="button" class="item-product__minus count-minus"
+                                                            value="-">
+                                                        <input type="text" class="item-product__count calc__input"
+                                                            value="1" name="" id="count">
+                                                        <input type="button" class="item-product__plus count-plus"
+                                                            value="+">
+                                                    </div>
+                                                </div>
+                                                <input type="submit" class="item-product__order _order-btn"
+                                                    value="заказать">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="catalog__swiper-slide swiper-slide">
+                                <article class="catalog__products-item item-product">
+                                    <div class="item-product__body">
+                                        <div class="item-product__image">
+                                            <img class="bottol-l6" src="img/6-litr.png" alt="">
+                                        </div>
+                                        <div class="item-product__content">
+                                            <h5 class="item-product__type">дополн</h5>
+                                            <form class="item-product__form form-product" action="#">
+                                                <div class="item-product__top">
+                                                    <span class="item-product__price"> 100 Р</span>
+                                                    <div class="item-product__calc ">
+                                                        <input type="button" class="item-product__minus count-minus"
+                                                            value="-">
+                                                        <input type="text" class="item-product__count calc__input"
+                                                            value="1" name="" id="count">
+                                                        <input type="button" class="item-product__plus count-plus"
+                                                            value="+">
+                                                    </div>
+                                                </div>
+                                                <input type="submit" class="item-product__order _order-btn"
+                                                    value="заказать">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="catalog__swiper-slide swiper-slide">
+                                <article class="catalog__products-item item-product">
+                                    <div class="item-product__body">
+                                        <div class="item-product__image">
+                                            <img class="bottol-l15" src="img/1.5-litr.png" alt="">
+                                        </div>
+                                        <div class="item-product__content">
+                                            <h5 class="item-product__type">дополн</h5>
+                                            <form class="item-product__form form-product" action="#">
+                                                <div class="item-product__top">
+                                                    <span class="item-product__price"> 100 Р</span>
+                                                    <div class="item-product__calc ">
+                                                        <input type="button" class="item-product__minus count-minus"
+                                                            value="-">
+                                                        <input type="text" class="item-product__count calc__input"
+                                                            value="1" name="" id="count">
+                                                        <input type="button" class="item-product__plus count-plus"
+                                                            value="+">
+                                                    </div>
+                                                </div>
+                                                <input type="submit" class="item-product__order _order-btn"
+                                                    value="заказать">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="catalog__swiper-slide swiper-slide">
+                                <article class="catalog__products-item item-product">
+                                    <div class="item-product__body">
+                                        <div class="item-product__image">
+                                            <img class="bottol-l05" src="img/0.5-litr.png" alt="">
+                                        </div>
+                                        <div class="item-product__content">
+                                            <h5 class="item-product__type">дополн</h5>
+                                            <form class="item-product__form form-product" action="#">
+                                                <div class="item-product__top">
+                                                    <span class="item-product__price"> 100 Р</span>
+                                                    <div class="item-product__calc ">
+                                                        <input type="button" class="item-product__minus count-minus"
+                                                            value="-">
+                                                        <input type="text" class="item-product__count calc__input"
+                                                            value="1" name="" id="count">
+                                                        <input type="button" class="item-product__plus count-plus"
+                                                            value="+">
+                                                    </div>
+                                                </div>
+                                                <input type="submit" class="item-product__order _order-btn"
+                                                    value="заказать">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="about">
+        <div class="about__container _container">
+            <div class="about__body">
+                <h1 class="about__title _title">Вода вятская — ПИТЬЕВАЯ <br> ВОДА ДЛЯ ДОМА И ОФИСА</h1>
+                <p class="about__text">Выбрать компанию, предлагающую действительно хороший товар, не так-то
+                    просто. <br>
+                    Высокая цена далеко не всегда означает отменное качество, порой предлагается простая <br>
+                    вода из-под крана, о чём можно узнать из этикетки. <br> <span>
+                        Наша компания предлагает действительно качественный товар и гарантирует своевременную
+                        доставку питьевой воды до дома или офиса. У нас вы можете также купить кулер для воды,
+                        что позволит легко запасаться нужным количеством и получать легко и быстро, а также
+                        иметь
+                        возможность в любой момент налить себе ароматного чаю. Такие приспособления незаменимы
+                        в офисе, а теперь используются и в квартирах. </span> </p>
+
+                <a href="" class="about__more"> подробнее </a>
+
+                <h2 class="about__title _title">Наше производство
+                    изнутри</h2>
+                <div class="about__video">
+                    <!-- <video src=""></video> -->
+                    <img src="img/video.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+@@include("html/footer.html")

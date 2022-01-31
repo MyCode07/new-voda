@@ -1,0 +1,206 @@
+// popup ----------------------
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000, $alpha: 0.8);
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(0, -100%);
+    transition: all 0.5s ease 0s;
+    overflow-y: auto;
+
+    overflow-x: hidden;
+    &._open {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0, 0);
+        z-index: 1000;
+    }
+
+    input {
+        margin: 0 0 25px 0;
+        position: static;
+    }
+
+    // .popup__body
+
+    &__body {
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 10px;
+    }
+
+    // .popup__content
+
+    &__content {
+        background-color: #50beff;
+        border-radius: 20px;
+        color: #000;
+        max-width: 800px;
+        @include adaptive-value("padding-left", 70, 20);
+        @include adaptive-value("padding-right", 70, 20);
+        @include adaptive-value("padding-bottom", 70, 20);
+        position: relative;
+    }
+
+    &__form {
+        &-body {
+            display: flex;
+            flex-direction: column;
+        }
+        &-name,
+        &-phone {
+            font-family: Montserrat;
+            font-weight: 600;
+            @include adaptive-value("font-size", 25, 14);
+            @include adaptive-value("line-height", 31, 17);
+            @include adaptive-value("padding-top", 15, 8);
+            @include adaptive-value("padding-bottom", 23, 13);
+            @include adaptive-value("padding-left", 25, 14);
+            color: rgba(255, 255, 255, 0.6);
+            background-color: rgba(164, 234, 255, 0.5);
+            backdrop-filter: blur(11px);
+            border-radius: 10px;
+        }
+        &-order {
+            font-family: Montserrat;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #ffffff;
+            cursor: pointer;
+            @include adaptive-value("font-size", 25, 14);
+            @include adaptive-value("line-height", 31, 17);
+            @include adaptive-value("padding-top", 17, 9);
+            @include adaptive-value("padding-bottom", 17, 9);
+            @include adaptive-value("padding-right", 34, 18);
+            @include adaptive-value("padding-left", 43, 23);
+
+            background-color: #ec1f3a;
+            border: 2px solid #ec1f3a;
+            border-radius: 10px;
+            @media (any-hover: hover) {
+                &:hover {
+                    border: 2px solid #fff;
+                }
+            }
+        }
+    }
+
+    // .popup__close
+
+    &__close {
+        position: absolute;
+        top: 10px;
+        @include adaptive-value("right", 10, 17);
+        @include adaptive-value("width", 30, 20);
+        @include adaptive-value("height", 30, 20);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        @media (any-hover: hover) {
+            &:hover {
+                transform: rotate(180deg);
+            }
+        }
+        span {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 3px;
+            background-color: #fff;
+            pointer-events: none;
+        }
+        & :first-child {
+            transform: rotate(45deg);
+        }
+        & :last-child {
+            transform: rotate(-45deg);
+        }
+    }
+
+    // .popup__title
+
+    &__title {
+        @include adaptive-value("font-size", 36, 26);
+        @include adaptive-value("line-height", 50, 30);
+        @include adaptive-value("margin-top", 70, 40);
+        font-family: Montserrat;
+        text-transform: uppercase;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 17px;
+        color: #fff;
+    }
+
+    // .popup__text
+
+    &__text {
+        .popup-link {
+            position: relative;
+            &:before {
+                position: absolute;
+                content: "Перейти";
+                left: 0;
+                top: 0;
+                font-size: 12px;
+                color: rosybrown;
+                visibility: hidden;
+                opacity: 0;
+                transition: all 0.3s ease 0s;
+            }
+            @media (any-hover: hover) {
+                &:hover {
+                    &:before {
+                        top: -100%;
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    &__send {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        left: 0;
+        top: 0;
+        visibility: hidden;
+        opacity: 0;
+        transform: translate(0, -100%);
+        transition: all 0.5s ease 0s;
+        overflow-y: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow-x: hidden;
+        z-index:100;
+        &._sended{
+            visibility: visible;
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        &-body {
+            background-color: #50beff;
+            border-radius: 10px;
+            padding: 150px 50px;
+        
+        }
+
+        &-content {
+            font-size: 50px;
+            color: #fff;
+        }
+    }
+}
+
+// popup end ----------------------------

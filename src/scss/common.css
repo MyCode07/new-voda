@@ -1,0 +1,90 @@
+._contacts-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.contact-item {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 25px;
+  color: #ffffff;
+}
+
+._title {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 57.2727px;
+  line-height: 70px;
+  margin-bottom: 69px;
+  color: #000;
+}
+
+.calc__input {
+  width: 40px;
+  height: 40px;
+  padding: 6px 14px;
+  font-family: Sen;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+  border: 1px solid #006fcc;
+  box-sizing: border-box;
+  border-radius: 9px;
+}
+
+.count-plus,
+.count-minus {
+  font-family: Sen;
+  font-weight: 400;
+  font-size: 22.1017px;
+  line-height: 28px;
+  text-align: center;
+  color: #8399a9;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+._link-underline {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+._link-underline:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 2px;
+  background-color: #50beff;
+  bottom: -10px;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  ._link-underline:hover:before {
+    width: 100%;
+  }
+}
+
+._order-btn {
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+@media (any-hover: hover) {
+  ._order-btn:hover {
+    background-color: #50beff;
+    color: #000;
+  }
+}/*# sourceMappingURL=common.css.map */
