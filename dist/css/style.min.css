@@ -2735,11 +2735,11 @@ body {
   color: #000000;
 }
 
-.wather-count {
+.water-count {
   padding: 0 40px 0 19px;
 }
 @media (max-width: 768px) {
-  .wather-count {
+  .water-count {
     padding: 0 0 0 19px;
   }
 }
