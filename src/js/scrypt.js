@@ -32,11 +32,13 @@ window.addEventListener('load', function (e) {
         });
     }
 
-    if (document.querySelector('[data-delivery]')) {
-        document.querySelectorAll('[data-delivery]')[1].classList.add('_active');
-    }
-    if (document.querySelector('[data-cooking]')) {
-        document.querySelectorAll('[data-cooking]')[0].classList.add('_active');
+    if (window.innerWidth <= 992) {
+        if (targetElem.classList.contains('header__burger')) {
+            document.querySelector('.header__menu-list').classList.toggle('_active');
+            document.querySelector('.contacts-main').classList.toggle('_active');
+            targetElem.classList.toggle('_active');
+            document.querySelector('body').classList.toggle('_noscroll');
+        }
     }
 
     if (document.querySelector('.catalog__product-slider')) {
@@ -49,18 +51,18 @@ window.addEventListener('load', function (e) {
         productSlider('.more-slider');
     }
     if (document.querySelector('.catalog__menu')) {
-        mobileSlider('.catalog__menu','.catalog__menu-body','.catalog__menu-item');
+        mobileSlider('.catalog__menu', '.catalog__menu-body', '.catalog__menu-item');
     }
     if (document.querySelector('.three__reasons-slider')) {
-        mobileSlider('.three__reasons-slider','.reasons-column','.reasons-column__item');
+        mobileSlider('.three__reasons-slider', '.reasons-column', '.reasons-column__item');
         new Swiper('.three__reasons-slider', {
             navigation: false,
-            pagination:{
-                el:'.three__reasons-slider-pagination'
+            pagination: {
+                el: '.three__reasons-slider-pagination'
             },
             grabCursor: true,
             spaceBetween: 37,
-            initialSlide:1,
+            initialSlide: 1,
             centeredSlides: true,
             slidesPerView: 'auto'
         })
@@ -69,7 +71,7 @@ window.addEventListener('load', function (e) {
     if (document.querySelector('.catalog__product-slider')) {
         let sliders = document.querySelectorAll('.catalog__product-slider');
         let tabs = document.querySelectorAll('.catalog__menu-item');
-    
+
         for (let i = 0; i < tabs.length; i++) {
             tabs[i].addEventListener('click', function () {
                 tabs.forEach(item => {
@@ -83,32 +85,13 @@ window.addEventListener('load', function (e) {
             })
         }
     }
-    
-    document.addEventListener('click', function (e) {
-        let targetElem = e.target;
-        if (targetElem.hasAttribute('data-delivery')) {
-            document.querySelectorAll('[data-delivery]').forEach(item => {
-                item.classList.remove('_active');
-            });
-            targetElem.classList.add('_active');
-        }
-    
-        if (targetElem.hasAttribute('data-cooking')) {
-            document.querySelectorAll('[data-cooking]').forEach(item => {
-                item.classList.remove('_active');
-            });
-            targetElem.classList.add('_active');
-        }
-    
-        if (window.innerWidth <= 992) {
-            if (targetElem.classList.contains('header__burger')) {
-                document.querySelector('.header__menu-list').classList.toggle('_active');
-                document.querySelector('.contacts-main').classList.toggle('_active');
-                targetElem.classList.toggle('_active');
-                document.querySelector('body').classList.toggle('_noscroll');
-            }
-        }
-    });
+
+    setLinksHref();
+
+    if(document.querySelector('.footer__menu-item')){
+        let links =document.querySelectorAll('.footer__menu-item');
+        links[links.length - 1].classList.add('footer__privacy');
+    }
 
 });
 
@@ -134,14 +117,14 @@ function productSlider(slider) {
             }
         },
         breakpoints: {
-            1440: {  spaceBetween: 29 },
-            1200: { centeredSlides: false, initialSlide: 0, spaceBetween:40 },
+            1440: { spaceBetween: 29 },
+            1200: { centeredSlides: false, initialSlide: 0, spaceBetween: 40 },
             320: { centeredSlides: true, initialSlide: 3 }
         },
     })
 }
 
-function mobileSlider(slider,wrapper,slides){
+function mobileSlider(slider, wrapper, slides) {
     if (window.innerWidth <= 768) {
         document.querySelector(slider).classList.add('swiper');
         document.querySelector(wrapper).classList.add('swiper-wrapper');
@@ -165,5 +148,106 @@ function mobileSlider(slider,wrapper,slides){
 }
 
 
+function setLinksHref(){
+    if (document.querySelector('.header__main-contacts .contacts-main__phone')) {
+        let phoneLink = document.querySelector('.header__main-contacts .contacts-main__phone');
+        let phone = phoneLink.querySelector('.contact-item').innerText;
+    
+        if (phone != '') {
+            let phoneReady = phone.replace((/[^0-9]/g), '');
+            phoneLink.href = `tel:+${phoneReady.trim()}`;
+        }
+        else {
+            phoneLink.href = `#`;
+        }
+    }
+    
+    if (document.querySelector('.header__main-contacts .contacts-main__whatsapp')) {
+        let whappLink = document.querySelector('.header__main-contacts .contacts-main__whatsapp');
+        let whapp = whappLink.querySelector('.contact-item').innerText;
+    
+        if (whapp != '') {
+            let whappReady = whapp.replace((/[^0-9]/g), '');
+            whappLink.href = `https://wa.me/+${whappReady.trim()}`;
+        }
+        else {
+            whappLink.href = `#`;
+        }
+    
+    }
+    
+    if (document.querySelector('.header__main-contacts .contacts-main__instagram')) {
+    
+        let instaLink = document.querySelector('.header__main-contacts .contacts-main__instagram');
+        let insta = instaLink.querySelector('.contact-item').innerText;
+    
+        if (insta != '') {
+            let instaReady = insta.replace((/\@/g), '');
+            instaLink.href = `https://www.instagram.com/${instaReady.trim()}/`;
+        }
+        else {
+            instaLink.href = `#`;
+        }
+    }
 
- 
+    if (document.querySelector('.footer__contacts-phone')) {
+    
+        let footerPhoneLink = document.querySelector('.footer__contacts-phone');
+        let footerPhone = footerPhoneLink.querySelector('.contact-item').innerText;
+    
+        if (footerPhone != '') {
+            let footerPhoneReady = footerPhone.replace((/[^0-9]/g), '');
+            footerPhoneLink.href = `tel:+${footerPhoneReady.trim()}`;
+        }
+        else {
+            footerPhoneLink.href = `#`;
+        }
+    }
+
+    if (document.querySelector('.footer__contacts-whatsapp')) {
+        let footerWhappLink = document.querySelector('.footer__contacts-whatsapp');
+        let footerWhapp = footerWhappLink.querySelector('.contact-item').innerText;
+    
+        if (footerWhapp != '') {
+            let footerWhappReady = footerWhapp.replace((/[^0-9]/g), '');
+            footerWhappLink.href = `https://wa.me/+${footerWhappReady.trim()}`;
+        }
+        else {
+            footerWhappLink.href = `#`;
+        }
+    
+    }
+
+    if (document.querySelector('.footer__contacts-instagram')) {
+    
+        let footerInstaLink = document.querySelector('.footer__contacts-instagram');
+        let footerInsta = footerInstaLink.querySelector('.contact-item').innerText;
+    
+        if (footerInsta != '') {
+            let footerInstaReady = footerInsta.replace((/\@/g), '');
+            footerInstaLink.href = `https://www.instagram.com/${footerInstaReady.trim()}/`;
+        }
+        else {
+            footerInstaLink.href = `#`;
+        }
+    }
+
+    if (document.querySelector('.footer__contacts-vk')) {
+        let vkLink = document.querySelector('.footer__contacts-vk');
+        let vk = vkLink.querySelector('.contact-item').innerText;
+    
+        if (vk != '') {
+            vkLink.href = `https://${vk.trim()}`;
+        }
+        else {
+            vkLink.href = `#`;
+        }
+    
+    }
+}
+
+
+
+
+
+

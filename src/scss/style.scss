@@ -27,7 +27,7 @@
 body._noscroll {
     overflow: hidden;
 }
-body{
+body {
     background-color: rgba(47, 173, 255, 0.4);
 }
 
@@ -46,10 +46,6 @@ body{
     //     background-color: rgba(226, 242, 242, 1);
     //     z-index: -1;
     // }
-
-    git remote add origin https://github.com/MyCode07/new-voda.git
-git branch -M main
-git push -u origin main
 
     &__image {
         position: absolute;
@@ -196,7 +192,11 @@ git push -u origin main
         background-color: rgba(255, 255, 255, 0.6);
 
         @media (max-width: 1195px) {
-            padding: 36px 33px 0 33px;
+            padding: 36px 33px 33px;
+            background-color: unset;
+        }
+        @media (max-width: 390px) {
+            padding: 30px 15px 15px;
             background-color: unset;
         }
 
@@ -224,8 +224,8 @@ git push -u origin main
         position: relative;
         margin-right: 15px;
 
-        @include adaptive-value("width", 288, 120);
-        @include adaptive-value("height", 75, 31);
+        @include adaptive-value("width", 288,197);
+        @include adaptive-value("height", 75, 51);
 
         img {
             position: absolute;
@@ -252,7 +252,7 @@ git push -u origin main
             @media (max-width: 992px) {
                 position: absolute;
                 left: 0;
-                top: -200%;
+                top: -300%;
                 width: 100%;
                 height: 100vh;
                 background-color: #50beff;
@@ -268,7 +268,6 @@ git push -u origin main
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    
                 }
             }
         }
@@ -585,6 +584,12 @@ git push -u origin main
         // .three__reasons-info
 
         &-info {
+            @media (min-width: 768px) and (max-width: 1195px) {
+                padding: 0 33px;
+                & :not(:last-child) {
+                    margin-right: 15px;
+                }
+            }
         }
 
         // .three__reasons-text
@@ -652,8 +657,8 @@ git push -u origin main
     &__text {
         font-family: Montserrat;
         font-weight: 400;
-        @include adaptive-value("font-size", 14, 9);
-        @include adaptive-value("line-height", 17, 11);
+        @include adaptive-value("font-size", 14, 12);
+        @include adaptive-value("line-height", 17, 12);
         color: #000001;
         @media (max-width: 768px) {
             text-align: center;
@@ -724,7 +729,7 @@ git push -u origin main
         // .calculator__form-column
 
         &-column {
-            @media (max-width: 936px) {
+            @media (max-width: 963px) {
                 &#order1 {
                     order: 1;
                 }
@@ -737,6 +742,9 @@ git push -u origin main
                 &#order4 {
                     order: 4;
                 }
+
+                border-bottom: 2px solid rgba(80, 190, 255, 0.5);
+                padding-bottom: 20px !important;
             }
         }
 
@@ -1147,10 +1155,9 @@ git push -u origin main
 
     &__products {
         position: relative;
-         
+
         max-width: 100%;
 
-      
         // .catalog__products-body
 
         &-body {
@@ -1358,24 +1365,29 @@ git push -u origin main
             width: 100%;
             height: 205px;
         }
-        img {
+        iframe {
             position: absolute;
             width: 100%;
             height: 100%;
             left: 0;
             top: 0;
         }
+        figure,
+        .wp-block-embed__wrapper {
+            width: 100%;
+            height: 100%;
+        }
     }
 }
 
 // privacy
 
-.privacy{
-    @include adaptive-value('margin-top', 165, 100);
-    @include adaptive-value('margin-bottom', 165, 100);
+.privacy {
+    @include adaptive-value("margin-top", 165, 100);
+    @include adaptive-value("margin-bottom", 165, 100);
 
-    &__title{
-         @include adaptive-value("margin-bottom", 68, 44);
+    &__title {
+        @include adaptive-value("margin-bottom", 68, 44);
     }
     &__text {
         font-family: Montserrat;
@@ -1396,44 +1408,6 @@ git push -u origin main
         position: absolute;
         z-index: -1;
         top: -200px;
-    }
-
-    &__waves {
-        background-color: #50beff;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        &-wave {
-            width: 100px;
-            height: 100px;
-            left: 50%;
-            top: -100px;
-            position: absolute;
-            background-color: inherit;
-            &:before,
-            &:after {
-                position: absolute;
-                content: "";
-                display: block;
-            }
-            .wave1 {
-                height: 70px;
-                width: 100%;
-
-                &:before {
-                    background-color: inherit;
-                }
-
-                &:after {
-                    background-color: inherit;
-                }
-            }
-            .wave2 {
-            }
-            .wave3 {
-            }
-        }
     }
 
     // .footer__container
@@ -1459,8 +1433,7 @@ git push -u origin main
 
     &__logo {
         position: relative;
-        top: 22px;
-        @include adaptive-value("top", 22, 12);
+        top: 0px;
         @include adaptive-value("width", 288, 197);
         @include adaptive-value("height", 75, 51);
 
@@ -1473,7 +1446,6 @@ git push -u origin main
         }
 
         @media (max-width: 992px) {
-            top: 0;
             margin-bottom: 52px;
             align-self: center;
         }
@@ -1499,6 +1471,7 @@ git push -u origin main
             @include adaptive-value("margin-right", 115, 0);
             @media (max-width: 992px) {
                 margin-right: 0;
+                margin-bottom: 34px;
                 width: 100%;
                 flex-direction: row-reverse;
                 justify-content: space-around;
@@ -1568,7 +1541,7 @@ git push -u origin main
                 img {
                     @include adaptive-value("width", 40, 30);
                     @include adaptive-value("height", 40, 30);
-                    @media (max-width:992px) {
+                    @media (max-width: 992px) {
                         top: 1px;
                     }
                 }
@@ -1730,5 +1703,4 @@ git push -u origin main
     }
 }
 
-
-@import 'pages';
+@import "pages";
