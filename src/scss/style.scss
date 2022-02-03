@@ -27,39 +27,24 @@
 body._noscroll {
     overflow: hidden;
 }
-body {
-    background-color: rgba(47, 173, 255, 0.4);
-}
 
 .wrapper {
     width: 100%;
-    overflow-x: hidden;
     margin: 0 auto;
     position: relative;
-    // &:before {
-    //     position: absolute;
-    //     width: 100%;
-    //     height: 100%;
-    //     content: "";
-    //     left: 0;
-    //     top: 0;
-    //     background-color: rgba(226, 242, 242, 1);
-    //     z-index: -1;
-    // }
-
+    overflow:hidden;
     &__image {
         position: absolute;
         width: 100%;
         height: 100%;
         z-index: -1;
         left: 0;
+        top: 0;
 
-        @media (max-width: 1440px) {
-            width: 1440px;
-            height: 99.5%;
-
-            @include adaptive-value("top", -27, 50);
+        @media (max-width: 1200px) {
+            width:1440px;
             @include adaptive-value("left", 0, -216);
+            @include adaptive-value("top", 0, 35);
         }
     }
 }
@@ -190,9 +175,10 @@ body {
 
     &__top {
         background-color: rgba(255, 255, 255, 0.6);
-
+        padding: 10px 0 10px 0;
         @media (max-width: 1195px) {
-            padding: 36px 33px 33px;
+            padding: 36px 33px 0 33px ;
+            border-radius: 30px;
             background-color: unset;
         }
         @media (max-width: 390px) {
@@ -420,7 +406,7 @@ body {
             display: flex;
             justify-content: space-between;
             position: relative;
-            @include adaptive-value("margin-bottom", 182, 63);
+            @include adaptive-value("margin-bottom", 282, 63);
             @media (max-width: 1195px) {
                 padding: 0 33px;
             }
@@ -1403,11 +1389,15 @@ body {
 .footer {
     @include adaptive-value("padding-bottom", 80, 46);
     position: relative;
+     
 
+   
     &__background {
         position: absolute;
         z-index: -1;
-        top: -200px;
+        display: none;
+        width: 100%;
+       
     }
 
     // .footer__container

@@ -76,13 +76,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 });
 
-
-
-
-
-
-
-
 if (document.querySelector('.popup')) {
     // ссылки открывающие попап
     const popupLinks = document.querySelectorAll('._order-btn');
