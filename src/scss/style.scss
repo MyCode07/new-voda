@@ -32,19 +32,19 @@ body._noscroll {
     width: 100%;
     margin: 0 auto;
     position: relative;
-    overflow:hidden;
+    overflow: hidden;
     &__image {
         position: absolute;
         width: 100%;
         height: 100%;
         z-index: -1;
-        left: 0;
-        top: 0;
 
-        @media (max-width: 1200px) {
-            width:1440px;
-            @include adaptive-value("left", 0, -216);
-            @include adaptive-value("top", 0, 35);
+        @include adaptive-value("left", -0, -216);
+      top: 0;
+
+        @media (max-width: 1440px) {
+            width: 1440px;
+            @include adaptive-value("top", -15, 60);
         }
     }
 }
@@ -177,7 +177,7 @@ body._noscroll {
         background-color: rgba(255, 255, 255, 0.6);
         padding: 10px 0 10px 0;
         @media (max-width: 1195px) {
-            padding: 36px 33px 0 33px ;
+            padding: 36px 33px 0 33px;
             border-radius: 30px;
             background-color: unset;
         }
@@ -210,7 +210,7 @@ body._noscroll {
         position: relative;
         margin-right: 15px;
 
-        @include adaptive-value("width", 288,197);
+        @include adaptive-value("width", 288, 197);
         @include adaptive-value("height", 75, 51);
 
         img {
@@ -340,13 +340,21 @@ body._noscroll {
         @media (max-width: 768px) {
         }
         &:before {
-            position: absolute;
-            content: "";
-            width: 100vw;
-            height: 100vh;
+            position: fixed;
+            content: "Отправка данных...";
+            width: 100%;
+            height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
             opacity: 0;
             visibility: hidden;
+            color: #fff;
+            text-align: center;
+            @include adaptive-value('font-size', 50, 30);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            left: 0;
+            top: 0;
         }
         &._sending {
             &:before {
@@ -589,6 +597,7 @@ body._noscroll {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    flex-direction: row;
 
     // .reasons-column__item
 
@@ -643,8 +652,8 @@ body._noscroll {
     &__text {
         font-family: Montserrat;
         font-weight: 400;
-        @include adaptive-value("font-size", 14, 12);
-        @include adaptive-value("line-height", 17, 12);
+        @include adaptive-value("font-size", 16, 14);
+        @include adaptive-value("line-height", 17, 14);
         color: #000001;
         @media (max-width: 768px) {
             text-align: center;
@@ -1387,17 +1396,15 @@ body._noscroll {
 // footer
 
 .footer {
+    @include adaptive-value("margin-top", 0, 140);
     @include adaptive-value("padding-bottom", 80, 46);
     position: relative;
-     
 
-   
     &__background {
         position: absolute;
         z-index: -1;
         display: none;
         width: 100%;
-       
     }
 
     // .footer__container
@@ -1496,6 +1503,11 @@ body._noscroll {
         &-location {
             justify-content: flex-start;
             margin-bottom: 38px;
+            .contact-item br{
+                    @media (min-width:1250px) {
+                        display: none;
+                    }
+            }
         }
 
         // .footer__contacts-icon

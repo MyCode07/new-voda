@@ -1,3 +1,28 @@
+.mb-100{
+    @include adaptive-value("margin-bottom", 100, 60);
+}
+.mb-50{
+    @include adaptive-value("margin-bottom", 50, 30);
+}
+.fsz-50{
+    @include adaptive-value("font-size", 50, 34);
+}
+.fsz-30{
+    @include adaptive-value("font-size", 30, 18);
+}
+.tac{
+    text-align: center;
+}
+.tar{
+    text-align: right;
+}
+.m0-auto{
+    img{
+        display: block;
+        margin: 0 auto;
+    }
+}
+
 ._contacts-icon {
     width: 45px;
     height: 45px;
@@ -131,7 +156,7 @@
     }
 
     .footer{
-        background-color: #1d6faa;
+        background-color: rgba(106, 198, 248, 1);
         margin-top: 70px;
         &__background{
             display: block;
